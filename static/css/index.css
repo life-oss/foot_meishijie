@@ -1,0 +1,90 @@
+.swiper-container {
+	width: 100%;
+	height: 100%;
+}
+.title{
+    text-align: center;
+}
+.swiper-slide a {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+/* 卡片css */
+.card{
+    width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+    margin: 100px 0;
+}
+.card .box{
+    position: relative;
+	width: 320px;
+	background: #fff;
+	padding: 100px 40px 60px;
+	box-shadow: 0 15px 45px rgba(0,0,0,.1);
+}
+.card .box:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #ff226d;
+	transform: scaleY(0);
+	transform-origin: top;
+	transition: transform 0.5s;
+}
+.card .box:hover:before{
+	transform: scaleY(1);
+	transform-origin: bottom;
+	transition: transform 0.5s;
+}
+.card .box h2{
+	position: absolute;
+	left: 40px;
+	top: 60px;
+	font-size: 4em;
+	font-weight: 800;
+	z-index: 1;
+	opacity: 0.1;
+	transition: 0.5s;
+}
+.card .box:hover h2{
+	opacity: 1;
+	color: #fff;
+	transform: translateY(-40px);
+}
+.card .box h3{
+	position: relative;
+	font-size: 1.5em;
+	z-index: 2;
+	color: #333;
+	transition: 0.5s;
+}
+.card .box p{
+	position: relative;
+	z-index: 2;
+	color: #555;
+	transition: 0.5s;
+}
+.card .box:hover h3,
+.card .box:hover p{
+	color: #fff;
+}

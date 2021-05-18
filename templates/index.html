@@ -1,0 +1,109 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>首页</title>
+    <script type="text/javascript" src="../static/js/jquery.js"></script>
+    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="../static/css/rerset.css" class="css">
+    <link rel="stylesheet" href="../static/css/header.css" class="css">
+    <!-- 使用swipe插件 -->
+    <link rel="stylesheet" href="../static/css/swiper-bundle.min.css" class="css">
+</head>
+
+<body>
+    <!-- 头部代码 -->
+    <header>
+        <div class="header">
+            <ul>
+                <li><a href="/"><span>首页</span></a></li>
+                <li><a href="/cyclopedia"><span>百科</span></a></li>
+                <li><a href="/show"><span>展示</span></a></li>
+                <li><a href="/about"><span>关于</span></a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- 轮播图 -->
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="https://www.meishij.net/zuofa/shuizhuroupian_37.html"><img src="../static/img/水煮肉片.jpg" alt=""
+                        width="510px" height="400px"></a>
+
+            </div>
+            <div class="swiper-slide">
+                <a href="https://www.meishij.net/zuofa/jiangbaojiding_18.html"><img src="../static/img/酱爆鸡丁.jpg" alt=""
+                        width="510px" height="400px"></a>
+
+            </div>
+            <div class="swiper-slide">
+                <a href="https://www.meishij.net/zuofa/gongbaojiding_65.html"><img src="../static/img/宫保鸡丁.jpg" alt=""
+                        width="510px" height="400px"></a>
+
+            </div>
+        </div>
+
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <script src="../static/js/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+
+            },
+            loop: true,
+            autoplay: true,
+        });
+    </script>
+    <div class="title" style="margin-top: 40px;">
+        <h1>前言</h1>
+    </div>
+    <!-- 卡片 -->
+    <div class="card">
+        <div class="box">
+            <h2>01</h2>
+            <h3>关于美食短句</h3>
+            <p>1、如果你不喜欢黄油，那就用奶酪吧。<br>——茱莉亚·蔡尔德（Julia Child）<br>
+                2、对美食感兴趣，但对烹饪不感兴趣，这是很荒谬的。<br>——温德尔·贝里（Wendell Berry）<br>
+                3、吃吧，但是不要吃得太多。<br>——迈克尔·波伦(Michael Pollan)<br>
+                4，人间有真味，半酣意尤长。<br>——左壮（Zhuang Zuo）<br>
+                5、不要吃任何不会腐坏的东西。<br>——迈克尔·波伦(Michael Pollan)<br>
+                <a href="https://zhuanlan.zhihu.com/p/21469764">来自于知乎</a>
+            </p>
+        </div>
+        <div class="box">
+            <h2>02</h2>
+            <h3>关于美食诗句</h3>
+            <p>1、春日春盘细生菜，忽忆两京梅发时。<br>——杜甫《立春》<br>
+                2、青浮卵碗槐芽饼，红点冰盘藿叶鱼。<br>—— 宋 · 苏轼《二月十九日携白酒鲈鱼过詹使君食槐叶冷淘》<br>
+                3、夏日山居好，茅檐水饼香。<br>—— 宋 · 舒岳祥《夏日山居好十首其一》<br>
+                4、看花吃酒唱歌去，如此风流有几人。<br>—— 明 · 袁凯《马益之邀陈子山应奉秦景容县尹江上看花二公》<br>
+                5、脱蕊收将熬粥吃，落圌仍好当香烧。<br>—— 宋 · 杨万里《落梅有叹》<br>
+                <a href="https://baijiahao.baidu.com/s?id=1618759795773050259&wfr=spider&for=pc">来自于百度</a>
+            </p>
+        </div>
+        <div class="box">
+            <h2>03</h2>
+            <h3>关于美食的书</h3>
+            <p>
+                《唯爱与美食不可辜负》<br>
+                <br>简介：</br><br>
+                在本书中，作者讲述了二十五个关于各类美食的故事。穿插于蛋糕、甜点、意面、咖喱酱肉、鱼子酱、螃蟹浓汤、鲜蚝之间的，是女性对于生活、情感、人生的领悟和面对世界的勇气和执着。这种食物与情感交融在一起的感性文字会轻触到她们柔软的内心，让这些在都市中被迫坚强成长的女性能够通过阅读抚慰心灵的孤独与冰冷。<br>
+                <a href="https://book.douban.com/subject/25807523/">来自于豆瓣</a>
+            </p>
+        </div>
+
+    </div>
+    <!-- 小玩偶 -->
+    <script src="../static/js/jquery.js"></script>
+    <link rel="stylesheet" href="../static/css/font-awesome.min.css\" />
+    <script src="../static/js/autoload.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于</title>
+    <link rel="stylesheet" href="../static/css/rerset.css">
+    <link rel="stylesheet" href="../static/css/header.css">
+    <script src="../static/js/jquery.js"></script>
+    <script src="../static/js/marked.min.js"></script>
+</head>
+
+<body>
+    <!-- 头部代码 -->
+    <header>
+        <div class="header">
+            <ul>
+                <li><a href="/"><span>首页</span></a></li>
+                <li><a href="/cyclopedia"><span>百科</span></a></li>
+                <li><a href="/show"><span>展示</span></a></li>
+                <li><a href="/about"><span>关于</span></a></li>
+            </ul>
+        </div>
+
+
+
+    </header>
+    <div id="content" style="text-align: center;">
+
+    </div>
+
+    <script>
+        $.get('../static/美食数据分析.md', function (response, status, xhr) {
+            $("#content").html(marked(response));
+        });
+    </script>
+    <!-- 小玩偶 -->
+    <script src="../static/js/jquery.js"></script>
+    <link rel="stylesheet" href="../static/css/font-awesome.min.css\" />
+    <script src="../static/js/autoload.js"></script>
+</body>
+
+</html>

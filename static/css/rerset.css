@@ -1,0 +1,18 @@
+/*基础初始化样式文件*/
+html,body{
+    margin:0;
+    font-family: 'MicrosoftYaHeiLight';
+    overflow-x: hidden;
+}
+ul,li{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+img{
+    font-size:0;
+}
+a{
+    text-decoration: none;
+    padding:0;
+}
