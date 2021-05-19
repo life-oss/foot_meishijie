@@ -29,12 +29,12 @@ def split_word(text):
             object_list.append(word)
     # collections.Counter 计数器，统计单词个数
     word_counts = collections.Counter(object_list)
-    word_count=word_counts.most_common(2000)
+    word_count = word_counts.most_common(2000)
     # 筛选词语
     return word_count
 
 
-def word_cloud(word_counts,i,str):
+def word_cloud(data, i, str):
     c = (
         WordCloud()
             .add(
@@ -55,10 +55,10 @@ def word_cloud(word_counts,i,str):
 
 if __name__ == '__main__':
     # 主料词云分析
-    sql='select main_ingredient from foot_menu;'
+    sql = 'select main_ingredient from foot_menu;'
     data = split_word(get_text(sql))
-    word_cloud(data,1,"主料分析")
+    word_cloud(data, 1, "主料分析")
     # 配料词云分析
-    sql2='select ingredient from foot_menu;'
+    sql2 = 'select ingredient from foot_menu;'
     data = split_word(get_text(sql2))
-    word_cloud(data, 2,"辅料分析")
+    word_cloud(data, 2, "辅料分析")

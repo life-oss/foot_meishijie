@@ -5,6 +5,8 @@ from lxml import etree
 
 from get_url import get_url
 
+"""此程序通过get_url所拿到的地址获取需要获取的信息"""
+
 
 def get_data():
     db = pymysql.connect(host='localhost', user='root', passwd='123456', db='foot', port=3306, charset='utf8')
@@ -84,5 +86,5 @@ def method_name(url):
 
 # 试验
 # print(method_name('https://www.meishij.net/caixi/chuancai/'))
-if __name__ == '__main__':
-    get_data()
+# if __name__ == '__main__':
+    # get_data()

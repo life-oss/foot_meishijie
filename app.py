@@ -1,52 +1,54 @@
 import flask
 from flask import Flask
 
+"""
+    运行顺序
+    首先运行get_data.py将所有的数据存到数据库当中
+    再运行app.py将所有效果展示
+"""
+
 app = Flask(__name__)
 
 
-# @app.route('/')
-# def hello_world():
-#     return flask.render_template('./wordcount/ingredient1.html')
-
-
+# 前端页面
 @app.route('/')
-def a():
+def index():
     return flask.render_template('index.html')
 
 
 @app.route('/cyclopedia')
-def b():
+def cyclopedia():
     return flask.render_template('cyclopedia.html')
 
 
 @app.route('/show')
-def c():
+def show():
     return flask.render_template('show.html')
 
 
+@app.route('/about')
+def about():
+    return flask.render_template('about.html')
+
+
 @app.route('/bar')
-def e():
+def bar():
     return flask.render_template('echarts/bar.html')
 
 
 @app.route('/pie')
-def f():
+def pie():
     return flask.render_template('echarts/pie.html')
 
 
 @app.route('/ingredient1')
-def g():
+def ingredient1():
     return flask.render_template('wordcount/ingredient1.html')
 
 
 @app.route('/ingredient2')
-def h():
+def ingredient2():
     return flask.render_template('wordcount/ingredient2.html')
-
-
-@app.route('/about')
-def d():
-    return flask.render_template('about.html')
 
 
 if __name__ == '__main__':

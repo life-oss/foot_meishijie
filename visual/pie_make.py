@@ -30,7 +30,7 @@ def histogram():
     data_pair = [list(z) for z in zip(x_data, y_data)]
     data_pair.sort(key=lambda x: x[1])
     (
-        Pie(init_opts=opts.InitOpts(bg_color='#717f8f',theme=ThemeType.LIGHT))
+        Pie(init_opts=opts.InitOpts(bg_color='#717f8f', theme=ThemeType.LIGHT))
             .add(
             series_name="占比",
             data_pair=data_pair,

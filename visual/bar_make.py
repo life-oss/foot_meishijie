@@ -1,9 +1,6 @@
 import pymysql
-from pyecharts.charts import Bar, Map
+from pyecharts.charts import Bar
 from pyecharts import options as opts
-
-# 拿到数据
-from pyecharts.faker import Faker
 from pyecharts.globals import ThemeType
 
 db = pymysql.connect(host='localhost', user='root', passwd='123456', db='foot', port=3306, charset='utf8')
@@ -33,4 +30,3 @@ c = (
         title_opts={"text": "中华菜系Top10", "subtext": "数据来源于美食杰"})
         .render("../templates/echarts/bar.html")
 )
-

@@ -4,6 +4,8 @@ import pymysql
 import requests
 from lxml import etree
 
+"""此程序用于拿取需要爬取的所有url，存于MySQL数据库当中"""
+
 '''
 第一步：
 爬取网页需要用到的，需要执行多次
@@ -22,8 +24,10 @@ def get_url(url):
     # 2.请求,返回页面数据
     try:
         response = requests.get(url, headers=headers, cookies=cookie)
-        html = response.text
-        return html
+        # 针对于重定向网址
+        if response.url == url:
+            html = response.text
+            return html
     except requests.exceptions.ConnectionError:
         requests.status_code = "Connection refused"
 
@@ -135,14 +139,14 @@ def set_data():
     db.close()
 
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
     # 测试详情链接的数据
     # print(next_page('https://www.meishij.net/fenlei/jiangxicai/?order=-fav_num'))
     # print(all_page())
     # 测试菜系的数据
     # print(get_category())
     # 运行保存数据
-    set_data()
+    # set_data()
     # url = get_category()
     # for i in url:
     #     a, b = next_page(i)
