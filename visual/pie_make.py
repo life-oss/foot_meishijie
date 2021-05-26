@@ -7,8 +7,16 @@ from pyecharts.globals import ThemeType
 def get_data():
     db = pymysql.connect(host='localhost', user='root', passwd='123456', db='foot', port=3306, charset='utf8')
     cursor = db.cursor()
-    sql = 'select DISTINCT dishes_system,COUNT(dishes_system) as count from foot_menu GROUP BY dishes_system ORDER BY ' \
-          'count desc; '
+    sql = """SELECT DISTINCT
+dishes_system,
+	COUNT( dishes_system ) AS count 
+FROM
+	new_menu 
+GROUP BY
+	dishes_system 
+ORDER BY
+	count DESC;"""
+
     cursor.execute(sql)
     # 拿全部数据
     urls = cursor.fetchall()
@@ -58,5 +66,5 @@ def histogram():
     )
 
 
-if __name__ == '__main__':
-    histogram()
+# if __name__ == '__main__':
+#     histogram()

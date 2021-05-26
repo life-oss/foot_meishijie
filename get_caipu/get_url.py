@@ -131,7 +131,7 @@ def set_data():
         for j in range(len(url_list)):
             url = url_list[j]
             # print(url + "第" + str(j) + "条")
-            sql = 'insert into foot_url values(0,\"%s\",\"%s\")' % (str(dishes_system), str(url))
+            sql = 'insert into url values(0,\"%s\",\"%s\")' % (str(dishes_system), str(url))
             cursor.execute(sql)
             db.commit()
     print('爬取完成，恭喜恭喜！')

@@ -53,12 +53,12 @@ def word_cloud(data, i, str):
     )
 
 
-if __name__ == '__main__':
-    # 主料词云分析
-    sql = 'select main_ingredient from foot_menu;'
-    data = split_word(get_text(sql))
-    word_cloud(data, 1, "主料分析")
-    # 配料词云分析
-    sql2 = 'select ingredient from foot_menu;'
-    data = split_word(get_text(sql2))
-    word_cloud(data, 2, "辅料分析")
+# if __name__ == '__main__':
+#     # 主料词云分析
+#     sql = 'select main_ingredient from foot_menu;'
+#     data = split_word(get_text(sql))
+#     word_cloud(data, 1, "主料分析")
+#     # 配料词云分析
+#     sql2 = 'select ingredient from foot_menu;'
+#     data = split_word(get_text(sql2))
+#     word_cloud(data, 2, "辅料分析")
